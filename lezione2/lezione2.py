@@ -90,11 +90,97 @@ print(f"hi {invites[2]}, i would like to inite you for a dinner")
 print(f"hi {invites[3]}, i would like to inite you for a dinner")
 
 # 3-6. More Guests: You just found a bigger dinner table, so now more space is available. 
-# Think of three more guests to invite to dinner.
+# Think ofAngelo three more guests to invite to dinner.
 # Start with your program from Exercise 3-4 or 3-5.
 # Add a print() call to the end of your program, informing people that you found a bigger table.
 # Use insert() to add one new guest to the beginning of your list.
 # Use insert() to add one new guest to the middle of your list.
 # Use append() to add one new guest to the end of your list.
 # Print a new set of invitation messages, one for each person in your list.
+
+print(f"hi {invites}, i've found a bigger table!")
+invites.insert(0, "Angelo")
+invites.insert(3, "Giuseppe")
+invites.append("Riccardo")
+print(f"hi {invites[0]}, i would like to inite you for a dinner")
+print(f"hi {invites[1]}, i would like to inite you for a dinner")
+print(f"hi {invites[2]}, i would like to inite you for a dinner")
+print(f"hi {invites[3]}, i would like to inite you for a dinner")
+print(f"hi {invites[4]}, i would like to inite you for a dinner")
+print(f"hi {invites[5]}, i would like to inite you for a dinner")
+print(f"hi {invites[6]}, i would like to inite you for a dinner")
+
+# 3-7. Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, 
+# and now you have space for only two guests.
+# Start with your program from Exercise 3-6. Add a new line that prints a message saying that you can invite only two people for dinner.
+# Use pop() to remove guests from your list one at a time until only two names remain in your list.
+# Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+# Print a message to each of the two people still on your list, letting them know they’re still invited.
+# Use del to remove the last two names from your list, so you have an empty list. 
+# Print your list to make sure you actually have an empty list at the end of your program.
+
+print(f"hi {invites}, i'm sorry bat i have space for only two person")
+print(f"hi {invites[0]}, i'm sorry but you can't come at the dinner")
+invites.pop(0)
+print(f"hi {invites[1]}, i'm sorry but you can't come at the dinner")
+invites.pop(1)
+print(f"hi {invites[1]}, i'm sorry but you can't come at the dinner")
+invites.pop(1)
+print(f"hi {invites[1]}, i'm sorry but you can't come at the dinner")
+invites.pop(1)
+print(f"hi {invites[2]}, i'm sorry but you can't come at the dinner")
+invites.pop(2)
+print(f"hi {invites}, you two are still invited tonight!")
+del invites[0]
+del invites[0]
+print(invites)
+
+# 3-8. Seeing the World: Think of at least five places in the world you’d like to visit.
+# Store the locations in a list. Make sure the list is not in alphabetical order.
+# Print your list in its original order. Don’t worry about printing the list neatly; just print it as a raw Python list.
+# Use sorted() to print your list in alphabetical order without modifying the actual list.
+# Show that your list is still in its original order by printing it.
+# Use sorted() to print your list in reverse-alphabetical order without changing the order of the original list.
+# Show that your list is still in its original order by printing it again.
+
+# Use reverse()  to change the order of your list. Print the list to show that its order has changed.
+
+# Use reverse() to change the order of your list again. Print the list to show it’s back to its original order.
+
+# Use sort() to change your list so it’s stored in alphabetical order. Print the list to show that its order has been changed.
+
+# Use sort() to change your list so it’s stored in reverse-alphabetical order.
+
+# Print the list to show that its order has changed.
+
+city = ["Sidney", "Amsterdam", "Valenzia", "Tokyo", "London", "Miami"]
+print(city)
+
+print(sorted(city))
+print(city)
+
+new_cities: list = sorted(city, reverse = True)
+print(new_cities)
+print(city)
+
+city.reverse()
+print(city)
+
+city.reverse()
+print(city)
+
+city.sort()
+print(city)
+
+city.sort(reverse = True)
+print(city)
+
+# 3-9. Dinner Guests: Working with one of the programs from Exercises 3, 
+# use len() to print a message indicating the number of people you’re inviting to dinner.
+
+print("No of guest coming in dinner :",len(invites))
+
+# 3-10. Every Function: Think of things you could store in a list. 
+# For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. 
+# Write a program that creates a list containing these items and then uses each function introduced in this chapter at least once.
 
