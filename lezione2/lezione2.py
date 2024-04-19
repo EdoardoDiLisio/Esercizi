@@ -251,9 +251,10 @@ for word, significato in glossary.items():
 person0 : dict = {'first_name': 'Eric', 'last_name': 'Matthe', 'age': '43', 'city': 'Sitka'}
 person1 : dict = {'first_name': 'Leonardo', 'last_name': 'Leo', 'age': '34', 'city': 'Paris'}
 person2 : dict = {'first_name': 'Valerio', 'last_name': 'Vale', 'age': '67', 'city': 'London'}
-persons  = list [person0, person1, person2]
-for person in persons:
-    print(person)
+persons : list = [person0, person1, person2]
+for dizionario in persons:
+    for k, v in dizionario.items():
+        print(f'{k} {v}')
 
 # 6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. 
 # In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. 
