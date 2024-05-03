@@ -11,9 +11,7 @@ def prime_factors(n: int) -> list[int]:
         while n % i == 0:
             fattori_primi.append(i)
             n //= i
-            print(i)
     if n > 2:
         fattori_primi.append(n)
 
     return fattori_primi
-prime_factors(99999999999999999999)
