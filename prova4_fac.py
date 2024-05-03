@@ -5,11 +5,9 @@ in caso contrario. Ogni lettera nella magazine può essere utilizzata solo una v
 def ransom(note: str, magazine: str) -> bool:
     letter_count = {}
     
-    # Conta le occorrenze di ogni lettera nella magazine
     for char in magazine:
         letter_count[char] = letter_count.get(char, 0) + 1
     
-    # Verifica se le lettere in note possono essere trovate nella magazine
     for char in note:
         if char not in letter_count or letter_count[char] == 0:
             return False
