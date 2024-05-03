@@ -32,8 +32,8 @@ def prime_factors(n: int) -> list[int]:
 # la funzione dovrebbe restituire il valore del gioiello più prezioso nello scrigno.
 
 def third_max(nums: list[int]) -> int:
-    lista_senza_duplicati = list(set(nums))
-    for i in range(2):
-        e = max(nums)
-        nums.remove(e)
-    return max(nums)
+    unique_nums = sorted(set(nums), reverse=True)
+    if len(unique_nums) >= 3:
+            return unique_nums[2]
+    else:
+        return max(unique_nums)
