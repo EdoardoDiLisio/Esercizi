@@ -482,11 +482,6 @@ class TextEditor:
     def delete_text(self):
         self.text = ""
 
-# Example usage
-editor = TextEditor()
-editor.open_file("example.txt")
-editor.insert_text("\nThis is additional text.")
-editor.save_file("new_file.txt")
 
 '''
 import random
@@ -706,12 +701,5 @@ class TextEditor:
                 print(f"Text saved to file '{file_name}' successfully.")
         except Exception as e:
             print(f"An error occurred while saving the file: {e}")
-
-# Usage
-editor = TextEditor()
-editor.open_file("example.txt")
-print("Current text:", editor.text)
-editor.edit_text("This is a new text.")
-editor.save_file("new_file.txt")
 
 '''
