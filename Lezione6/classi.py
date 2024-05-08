@@ -4,9 +4,26 @@ class Person:
         self._name: str = name
         self._surname: str = surname
         self._ssn: str = ssn
-    
-    def get_name(self):
         
+        self._funzione_1()
+    
+    def get_ssn(self) -> str:
+        """
+        this function returns the ssn value
+        input: none
+        return: self._snn : str, the function returns the ssn value
+        """
+        return self._ssn
+    def _funzione_1(self):
+        
+        self._name.lower()
+        
+    def get_name(self) -> str:
+        """
+        this function returns a person's name
+        input: none
+        return: self._name : str, the function returs the person's name
+        """
         return  self._name
     
     def set_name(self, name: str) -> None:
@@ -19,12 +36,19 @@ class Person:
         
         raise Exception('you cannot modify the name!')
 
+    def __str__(self) -> str:
+        
+        return f"name: {self._name} surname: {self._surname} ssn: {self._ssn}"
 
 
+person_1: Person = Person(name='Edoardo', surname='Di_Lisio', ssn='dlsdrd00e30h501a')
+person_2: Person = Person(name='Ilaria', surname='Sergi', ssn='ddfght')
 
-Person_1: Person = Person(name='Edoardo', surname='Di_Lisio', ssn='DLSDRD00E30H501A')
+queue: list = [person_1, person_2]
 
-print(Person_1.get_name())
-Person_1.set_name(name='giusy')
+for person in queue:
+    print(person.get_ssn())
 
-print(Person_1.get_name())
+print(person_1.get_ssn())
+print(person_1.get_name())
+print(str(person_1))
