@@ -21,10 +21,10 @@ class Student:
             print("Gender:", self.gender)
         print()
 
-yourself = Student("Edoardo_Di_Lisio", "Cyber_Security", 20, "Male")
-left_neighbour = Student("Mario_Rossi", "Cyber_Security", 20, "Male")
-right_neighbour = Student("Anna_Bianchi", "Cyber_Security", 22, "Female")
+Me = Student("Edoardo_Di_Lisio", "Cyber_Security", 20, "Male")
+Left_neighbour = Student("Mario_Rossi", "Cyber_Security", 20, "Male")
+Right_neighbour = Student("Anna_Bianchi", "Cyber_Security", 22, "Female")
 
-yourself.print_info()
-left_neighbour.print_info()
-right_neighbour.print_info()
+Me.print_info()
+Left_neighbour.print_info()
+Right_neighbour.print_info()
