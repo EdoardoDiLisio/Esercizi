@@ -125,3 +125,65 @@ animal1.print_info()
 print("Info of animal2:")
 animal2.print_info()
 '''
+
+'''
+ESERCIZIO 4
+
+1.  Write a new class called Food, it should have name, price and
+    description as attributes.
+2.  Instantiate at least three different foods you know and like.
+3.  Create a new class called Menu, it should have a list (of Foods) as attribute.
+    __init__ should take a list of Foods as optional parameters (default=[])
+4.  Create a addFood() and removeFood() for the Menu
+5.  Create a few new Food instances. Add each to the Menu using the respective
+    Method.
+6.  Add a method printPrices() that list all items on the Menu with their
+    prices.
+7.  Add a Menu method getAveragePrice() that returns the average Food
+    price of the Menu
+'''
+
+class Food:
+    def __init__(self, name, price, description):
+        self.name = name
+        self.price = price
+        self.description = description
+
+class Menu:
+    def __init__(self):
+        self.foods = []
+
+    def addFood(self, food):
+        self.foods.append(food)
+
+    def removeFood(self, food):
+        self.foods.remove(food)
+
+    def printPrices(self):
+        for food in self.foods:
+            print(food.name, "-", food.price)
+
+    def getAveragePrice(self):
+        if not self.foods:
+            return 0
+        total_price = sum(food.price for food in self.foods)
+        return total_price / len(self.foods)
+
+# Creare alcuni oggetti Food
+pizza = Food("Pizza", 12.99, "Una pizza classica italiana con condimenti")
+burger = Food("Burger", 8.99, "Un succulento hamburger di manzo in un panino con condimenti")
+insalata = Food("Insalata", 7.49, "Un mix fresco di verdure con condimento")
+
+# Creare un menu e aggiungere il cibo
+menu = Menu()
+menu.addFood(pizza)
+menu.addFood(burger)
+menu.addFood(insalata)
+
+# Stampare i prezzi del menu
+print("Prezzi nel menu:")
+menu.printPrices()
+
+# Calcolare il prezzo medio degli articoli nel menu
+average_price = menu.getAveragePrice()
+print("\nPrezzo medio degli articoli nel menu:", average_price)
