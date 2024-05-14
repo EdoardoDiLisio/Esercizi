@@ -1,11 +1,11 @@
 import random
 
-def display_positions(Turtle_pos, Rabbit_pos):
+def display_positions(turtle_pos, rabbit_pos):
     positions = ['-'] * 70
-    positions[Turtle_pos] = 'T'
-    positions[Rabbit_pos] = 'H'
-    if Turtle_pos == Rabbit_pos:
-        positions[Turtle_pos] = 'OUCH!!!'
+    positions[turtle_pos] = 'T'
+    positions[rabbit_pos] = 'H'
+    if turtle_pos == rabbit_pos:
+        positions[turtle_pos] = 'OUCH!!!'
     print(''.join(positions))
 
 def Turtle_move():
@@ -31,25 +31,25 @@ def Rabbit_move():
         return 1
 
 def Main():
-    Turtle_pos = 1
-    Rabbit_pos = 1
+    turtle_pos = 1
+    rabbit_pos = 1
     print("BANG !!!!! AND THEY'RE OFF !!!!!")
     while True:
-        Turtle_pos += Turtle_move()
-        Rabbit_pos += Rabbit_move()
-        if Turtle_pos >= 70 or Rabbit_pos >= 70:
-            if Turtle_pos > Rabbit_pos:
+        turtle_pos += Turtle_move()
+        rabbit_pos += Rabbit_move()
+        if turtle_pos >= 70 or rabbit_pos >= 70:
+            if turtle_pos > rabbit_pos:
                 print('TORTOISE WINS! || VAY!!!')
-            elif Rabbit_pos > Turtle_pos:
-                print('HARE WINS || YUCH!!!')
+            elif rabbit_pos > turtle_pos:
+                print('RABBIT WINS || YUCH!!!')
             else:
                 print('IT\'S A TIE.')
             break
-        if Turtle_pos < 1:
-            Turtle_pos = 1
-        if Rabbit_pos < 1:
-            Rabbit_pos = 1
-        display_positions(Turtle_pos, Rabbit_pos)
+        if turtle_pos < 1:
+            turtle_pos = 1
+        if rabbit_pos < 1:
+            rabbit_pos = 1
+        display_positions(turtle_pos, rabbit_pos)
         
 
 if __name__ == '__main__':
@@ -60,15 +60,15 @@ print('\n\n\n\n\n\n\n')
 
 import random
 
-def display_positions(Turtle_pos, Rabbit_pos):
+def display_positions(turtle_pos, rabbit_pos):
     # Crea una lista per rappresentare la pista con '-' come posizioni vuote
     positions = ['-'] * 70
     # Posiziona la tartaruga (T) e la lepre (H) sulle rispettive posizioni
-    positions[Turtle_pos] = 'T'
-    positions[Rabbit_pos] = 'H'
+    positions[turtle_pos] = 'T'
+    positions[rabbit_pos] = 'H'
     # Se tartaruga e lepre si trovano sulla stessa posizione, stampa 'OUCH!!!'
-    if Turtle_pos == Rabbit_pos:
-        positions[Turtle_pos] = 'OUCH!!!'
+    if turtle_pos == rabbit_pos:
+        positions[turtle_pos] = 'OUCH!!!'
     # Stampa la pista con le posizioni attuali di tartaruga e lepre
     print(''.join(positions))
 
@@ -112,8 +112,8 @@ def change_weather():
 
 def main():
     # Inizializza le posizioni di tartaruga e lepre
-    Turtle_pos = 1
-    Rabbit_pos = 1
+    turtle_pos = 1
+    rabbit_pos = 1
     # Inizializza le condizioni meteorologiche come 'sunny' all'inizio
     weather = "sunny"
     # Inizializza il contatore di tick
@@ -122,27 +122,27 @@ def main():
     print("BANG !!!!! AND THEY'RE OFF !!!!!")
     while True:
         # Calcola la nuova posizione della tartaruga e della lepre
-        Turtle_pos += turtle_move(weather)
-        Rabbit_pos += rabbit_move(weather)
+        turtle_pos += turtle_move(weather)
+        rabbit_pos += rabbit_move(weather)
         
         # Verifica se uno dei due contendenti ha vinto la gara
-        if Turtle_pos >= 70 or Rabbit_pos >= 70:
-            if Turtle_pos > Rabbit_pos:
+        if turtle_pos >= 70 or rabbit_pos >= 70:
+            if turtle_pos > rabbit_pos:
                 print('TORTOISE WINS! || VAY!!!')
-            elif Rabbit_pos > Turtle_pos:
-                print('HARE WINS || YUCH!!!')
+            elif rabbit_pos > turtle_pos:
+                print('RABBIT WINS || YUCH!!!')
             else:
                 print('IT\'S A TIE.')
             break
         
         # Assicura che le posizioni non scendano al di sotto di 1
-        if Turtle_pos < 1:
-            Turtle_pos = 1
-        if Rabbit_pos < 1:
-            Rabbit_pos = 1
+        if turtle_pos < 1:
+            turtle_pos = 1
+        if rabbit_pos < 1:
+            rabbit_pos = 1
         
         # Mostra le posizioni attuali di tartaruga e lepre
-        display_positions(Turtle_pos, Rabbit_pos)
+        display_positions(turtle_pos, rabbit_pos)
         
         # Ogni 10 tick, cambia le condizioni meteorologiche
         if tick % 10 == 0:
@@ -257,7 +257,7 @@ def main():
             if turtle_pos > rabbit_pos:
                 print('TORTOISE WINS! || VAY!!!')
             elif rabbit_pos > turtle_pos:
-                print('HARE WINS || YUCH!!!')
+                print('RABBIT WINS || YUCH!!!')
             else:
                 print('IT\'S A TIE.')
             break
