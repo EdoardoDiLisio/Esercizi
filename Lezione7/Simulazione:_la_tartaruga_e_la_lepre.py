@@ -106,9 +106,12 @@ def rabbit_move(weather):
         move -= 2
     return move
 
-def change_weather():
-    # Cambia dinamicamente le condizioni meteorologiche ogni 10 tick
-    return random.choice(["sunny", "rainy"])
+def change_weather(tick):
+    # Cambia le condizioni meteorologiche ogni 10 tick
+    if tick % 10 == 0:
+        return random.choice(["sunny", "rainy"])
+    else:
+        return "unchanged"
 
 def main():
     # Inizializza le posizioni di tartaruga e lepre
@@ -144,9 +147,9 @@ def main():
         # Mostra le posizioni attuali di tartaruga e lepre
         display_positions(turtle_pos, rabbit_pos)
         
-        # Ogni 10 tick, cambia le condizioni meteorologiche
-        if tick % 10 == 0:
-            weather = change_weather()
+        # Cambia le condizioni meteorologiche ogni 10 tick
+        weather = change_weather(tick)
+        if weather != "unchanged":
             print(f"The weather changed to: {weather.upper()}")
         
         # Incrementa il contatore di tick
@@ -154,6 +157,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
 print('\n\n\n\n\n\n\n')  
 ##########################################  CON AGGIUNTA DELLE SFIDE  ##############################################################
@@ -228,9 +232,12 @@ def rabbit_move(energy, weather):
         move -= 2
     return move, energy
 
-def change_weather():
-    # Genera in modo casuale le condizioni meteorologiche tra 'sunny' e 'rainy'
-    return random.choice(["sunny", "rainy"])
+def change_weather(tick):
+    # Cambia le condizioni meteorologiche ogni 10 tick
+    if tick % 10 == 0:
+        return random.choice(["sunny", "rainy"])
+    else:
+        return "unchanged"
 
 def main():
     # Inizializza le posizioni di tartaruga e lepre
@@ -257,7 +264,7 @@ def main():
             if turtle_pos > rabbit_pos:
                 print('TORTOISE WINS! || VAY!!!')
             elif rabbit_pos > turtle_pos:
-                print('RABBIT WINS || YUCH!!!')
+                print('HARE WINS || YUCH!!!')
             else:
                 print('IT\'S A TIE.')
             break
@@ -271,9 +278,9 @@ def main():
         # Mostra le posizioni attuali di tartaruga e lepre
         display_positions(turtle_pos, rabbit_pos)
         
-        # Ogni 10 tick, cambia le condizioni meteorologiche
-        if tick % 10 == 0:
-            weather = change_weather()
+        # Cambia le condizioni meteorologiche ogni 10 tick
+        weather = change_weather(tick)
+        if weather != "unchanged":
             print(f"The weather changed to: {weather.upper()}")
         
         # Incrementa il contatore di tick
@@ -281,3 +288,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
