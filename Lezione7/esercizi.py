@@ -111,7 +111,7 @@ print("\n\n")
 # Input: hello world and practice makes perfect and hello world again
 # Output: again and hello makes perfect practice world
 
-
+'''
 def remove_duplicates(input_str):
     words = input_str.split()
     words = list(set(words))
@@ -121,3 +121,4 @@ def remove_duplicates(input_str):
 
 input_str = "hello world and practice makes perfect and hello world again"
 remove_duplicates(input_str)
+'''
