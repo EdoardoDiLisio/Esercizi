@@ -19,7 +19,7 @@ print("\n\n")
 # Write a function to calculate the factorial of a number given as input. The number should be returned as output. 
 # For example: Input: 8 --- Output: 40320
 
-#'''
+'''
 def factorial(n):
     if n == 0:
         return 1
@@ -28,7 +28,7 @@ def factorial(n):
 
 num = int(input("Enter a number: "))
 print("Factorial of", num, "is", factorial(num))
-#'''
+'''
 print("\n\n")
 
 #ESERCIZIO 3
@@ -95,5 +95,29 @@ print("\n\n")
 # all sentence characters. For example:
 # Input: Practice makes perfect
 # Output: PRACTICE MAKES PERFECT
+'''
+words: str = "Practice make perfect"
+def maiuscolo():
+    output: str = words.upper()
+    return output
+print(maiuscolo())
+'''
+print("\n\n")
 
-def 
+#ESERCIZIO 7
+
+# Write a function accepting an input string defined with whitespace-separated words and returning it after removing 
+# all duplicates and sorting each word alphanumerically. For example:
+# Input: hello world and practice makes perfect and hello world again
+# Output: again and hello makes perfect practice world
+
+
+def remove_duplicates(input_str):
+    words = input_str.split()
+    words = list(set(words))
+    words.sort()
+    output_str = ' '.join(words)
+    print(output_str)
+
+input_str = "hello world and practice makes perfect and hello world again"
+remove_duplicates(input_str)
