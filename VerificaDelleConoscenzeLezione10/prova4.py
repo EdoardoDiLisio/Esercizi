@@ -26,3 +26,5 @@ def print_seq():
     for i in range(19, 52, 8):
         print(i)
     print()
+    
+print_seq()

@@ -20,3 +20,7 @@ def time_difference(hours1: int, minutes1: int, seconds1: int, hours2: int, minu
     seconds_time1 = seconds_since_noon(hours1, minutes1, seconds1)
     seconds_time2 = seconds_since_noon(hours2, minutes2, seconds2)
     return abs(seconds_time2 - seconds_time1)
+
+print(time_difference(1, 0, 0, 3, 15, 30))
+
+print(time_difference(0, 0, 0, 12, 0, 0))

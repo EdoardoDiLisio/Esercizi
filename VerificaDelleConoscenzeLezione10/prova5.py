@@ -10,3 +10,7 @@ def integerPower(base: int, exponent: int) -> int:
     for _ in range(exponent):
         result *= base
     return result
+
+print(integerPower(3, 4))
+
+print(integerPower(2, 5))

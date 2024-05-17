@@ -67,7 +67,7 @@ def rimbalzo() -> None:
     velocita = 100.0
     rimbalzi = 0
     
-    while rimbalzi < 5:
+    while rimbalzi < 5: #cambia '< tot:' per variare funo a dove calcola 
         
         print(f"Tempo: {tempo} Altezza: {altezza}")
         
@@ -80,3 +80,5 @@ def rimbalzo() -> None:
             velocita *= -0.5
             rimbalzi += 1
             tempo += 1
+
+rimbalzo()
