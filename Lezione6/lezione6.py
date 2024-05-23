@@ -1,4 +1,4 @@
-#########################9-1. Restaurant:
+#########################  9-1. Restaurant:
 
 class Restaurant:
     def __init__(self, restaurant_name, cuisine_type):
@@ -17,7 +17,7 @@ restaurant.describe_restaurant()
 restaurant.open_restaurant()
 print('\n\n\n')
 
-######################9-2. Three Restaurants: 
+######################  9-2. Three Restaurants: 
 
 class Restaurant:
     def __init__(self, restaurant_name, cuisine_type):
@@ -40,7 +40,7 @@ print('\n')
 restaurant3.describe_restaurant()
 print('\n\n\n')
 
-#####################9-3. Users:
+#####################  9-3. Users:
 
 class User:
     def __init__(self, first_name, last_name, username, email, location):
@@ -76,7 +76,7 @@ print('\n')
 user3.describe_user()
 user3.greet_user()
 print('\n\n\n')
-#######################9-4. Number Served:
+#######################  9-4. Number Served:
 
 class Restaurant:
     def __init__(self, restaurant_name, cuisine_type):
@@ -105,7 +105,7 @@ restaurant.increment_number_served(50)
 print(f"Number of customers served: {restaurant.number_served}")
 print('\n\n\n')
 
-#######################9-5. Login Attempts
+#######################  9-5. Login Attempts
 
 class User:
     def __init__(self, first_name, last_name, username, email, location):
@@ -145,7 +145,7 @@ user.reset_login_attempts()
 print(f"Login attempts: {user.login_attempts}")
 print('\n\n\n')
 
-#######################9-6. Ice Cream Stand:
+#######################  9-6. Ice Cream Stand:
     
 class IceCreamStand(Restaurant):
     def __init__(self, restaurant_name, cuisine_type):
@@ -162,7 +162,7 @@ ice_cream_stand.flavors = ["Chocolate", "Vanilla", "Strawberry"]
 ice_cream_stand.display_flavors()
 print('\n\n\n')
 
-#####################9-7. Admin:
+#####################  9-7. Admin:
 
 class Admin(User):
     def __init__(self, first_name, last_name, username, email, location):
@@ -178,7 +178,7 @@ admin = Admin("John", "Doe", "johndoe", "johndoe@example.com", "New York")
 admin.show_privileges()
 print('\n\n\n')
 
-#########################9-8. Privileges:
+#########################  9-8. Privileges:
 
 class Privileges:
     def __init__(self):
@@ -193,7 +193,7 @@ privileges = Privileges()
 privileges.show_privileges()
 print('\n\n\n')
 
-######################9-9. Battery Upgrade:
+######################  9-9. Battery Upgrade:
 
 class ElectricCar:
     def __init__(self):
@@ -216,7 +216,7 @@ electric_car.battery.upgrade_battery()
 print(electric_car.battery.get_range())
 print("\n\n\n")
 
-######################9-10. Imported Restaurant:
+######################  9-10. Imported Restaurant:
 
 #restaurant.py
 class Restaurant:
@@ -233,8 +233,72 @@ from restaurant import Restaurant
 
 restaurant = Restaurant("Alice Pizza", "Pizza")
 restaurant.describe_restaurant()
+print("\n\n\n")
 
-######################9-11. Imported Admin:
+######################  9-11. Imported Admin:
 
+# user.py
+class User:
+    def __init__(self, first_name, last_name, username, email, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.email = email
+        self.location = location
 
-######################9-12. Multiple Modules:
+class Privileges:
+    def __init__(self):
+        self.privileges = ["can add post", "can delete post", "can ban user"]
+
+class Admin(User):
+    def __init__(self, first_name, last_name, username, email, location):
+        super().__init__(first_name, last_name, username, email, location)
+        self.privileges = Privileges()
+
+    def show_privileges(self):
+        print("Privileges:")
+        for privilege in self.privileges.privileges:
+            print(f"- {privilege}")
+
+# main.py
+from user import Admin
+
+admin = Admin("John", "Doe", "johndoe", "johndoe@example.com", "New York")
+admin.show_privileges()
+print("\n\n\n")
+
+######################  9-12. Multiple Modules:
+
+# user.py
+class User:
+    def __init__(self, first_name, last_name, username, email, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.email = email
+        self.location = location
+
+# privileges.py
+class Privileges:
+    def __init__(self):
+        self.privileges = ["can add post", "can delete post", "can ban user"]
+
+# admin.py
+from user import User
+from privileges import Privileges
+
+class Admin(User):
+    def __init__(self, first_name, last_name, username, email, location):
+        super().__init__(first_name, last_name, username, email, location)
+        self.privileges = Privileges()
+
+    def show_privileges(self):
+        print("Privileges:")
+        for privilege in self.privileges.privileges:
+            print(f"- {privilege}")
+
+# main.py
+from admin import Admin
+
+admin = Admin("John", "Doe", "johndoe", "johndoe@example.com", "New York")
+admin.show_privileges()
