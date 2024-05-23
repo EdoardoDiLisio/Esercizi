@@ -1,8 +1,4 @@
-'''
-9-1. Restaurant: Make a class called Restaurant. The __init__() method for Restaurant should store two attributes: a restaurant_name and 
-a cuisine_type. Make a method called describe_restaurant() that prints these two pieces of information, and a method called open_restaurant() 
-that prints a message indicating that the restaurant is open. Make an instance called restaurant from your class. Print the two attributes 
-individually, and then call both methods.
+#########################9-1. Restaurant:
 
 class Restaurant:
     def __init__(self, restaurant_name, cuisine_type):
@@ -20,11 +16,8 @@ restaurant = Restaurant("Alice Pizza", "Pizza")
 restaurant.describe_restaurant()
 restaurant.open_restaurant()
 print('\n\n\n')
-'''
 
-'''
-9-2. Three Restaurants: Start with your class from Exercise 9-1. Create three different instances from the class, 
-and call describe_restaurant() for each instance.
+######################9-2. Three Restaurants: 
 
 class Restaurant:
     def __init__(self, restaurant_name, cuisine_type):
@@ -45,11 +38,203 @@ print('\n')
 restaurant2.describe_restaurant()
 print('\n')
 restaurant3.describe_restaurant()
-'''
+print('\n\n\n')
 
-'''
-9-3. Users: Make a class called User. Create two attributes called first_name and last_name, and then create several other
-attributes that are typically stored in a user profile. Make a method called describe_user() that prints a summary of the user’s information.
-Make another method called greet_user() that prints a personalized greeting to the user. Create several instances representing different users,
-and call both methods for each user.
-'''
+#####################9-3. Users:
+
+class User:
+    def __init__(self, first_name, last_name, username, email, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.email = email
+        self.location = location
+
+    def describe_user(self):
+        print(f"First name: {self.first_name}")
+        print(f"Last name: {self.last_name}")
+        print(f"Username: {self.username}")
+        print(f"Email: {self.email}")
+        print(f"Location: {self.location}")
+
+    def greet_user(self):
+        print(f"Hello, {self.first_name}!")
+
+
+user1 = User("John", "Doe", "johndoe", "johndoe@example.com", "New York")
+user2 = User("Jane", "Doe", "janedoe", "janedoe@example.com", "Los Angeles")
+user3 = User("Bob", "Smith", "bobsmith", "bobsmith@example.com", "Chicago")
+#user1
+user1.describe_user()
+user1.greet_user()
+print('\n')
+#user2
+user2.describe_user()
+user2.greet_user()
+print('\n')
+#user3
+user3.describe_user()
+user3.greet_user()
+print('\n\n\n')
+#######################9-4. Number Served:
+
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        self.number_served = 0
+
+    def describe_restaurant(self):
+        print(f"Restaurant name: {self.restaurant_name}")
+        print(f"Cuisine type: {self.cuisine_type}")
+
+    def set_number_served(self, num):
+        self.number_served = num
+
+    def increment_number_served(self, num):
+        self.number_served += num
+
+
+restaurant = Restaurant("Alice Pizza", "Italian")
+print(f"Number of customers served: {restaurant.number_served}")
+
+restaurant.set_number_served(100)
+print(f"Number of customers served: {restaurant.number_served}")
+
+restaurant.increment_number_served(50)
+print(f"Number of customers served: {restaurant.number_served}")
+print('\n\n\n')
+
+#######################9-5. Login Attempts
+
+class User:
+    def __init__(self, first_name, last_name, username, email, location):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.email = email
+        self.location = location
+        self.login_attempts = 0
+
+    def describe_user(self):
+        print(f"First name: {self.first_name}")
+        print(f"Last name: {self.last_name}")
+        print(f"Username: {self.username}")
+        print(f"Email: {self.email}")
+        print(f"Location: {self.location}")
+
+    def greet_user(self):
+        print(f"Hello, {self.first_name}!")
+
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+
+user = User("John", "Doe", "johndoe", "johndoe@example.com", "New York")
+
+user.increment_login_attempts()
+user.increment_login_attempts()
+user.increment_login_attempts()
+
+print(f"Login attempts: {user.login_attempts}")
+
+user.reset_login_attempts()
+
+print(f"Login attempts: {user.login_attempts}")
+print('\n\n\n')
+
+#######################9-6. Ice Cream Stand:
+    
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
+
+    def display_flavors(self):
+        print("Ice cream flavors:")
+        for flavor in self.flavors:
+            print(f"- {flavor}")
+
+ice_cream_stand = IceCreamStand("Sunny's Ice Cream", "Ice Cream")
+ice_cream_stand.flavors = ["Chocolate", "Vanilla", "Strawberry"]
+ice_cream_stand.display_flavors()
+print('\n\n\n')
+
+#####################9-7. Admin:
+
+class Admin(User):
+    def __init__(self, first_name, last_name, username, email, location):
+        super().__init__(first_name, last_name, username, email, location)
+        self.privileges = ["can add post", "can delete post", "can ban user"]
+
+    def show_privileges(self):
+        print("Privileges:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+admin = Admin("John", "Doe", "johndoe", "johndoe@example.com", "New York")
+admin.show_privileges()
+print('\n\n\n')
+
+#########################9-8. Privileges:
+
+class Privileges:
+    def __init__(self):
+        self.privileges = ["can add post", "can delete post", "can ban user"]
+
+    def show_privileges(self):
+        print("Privileges:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+privileges = Privileges()
+privileges.show_privileges()
+print('\n\n\n')
+
+######################9-9. Battery Upgrade:
+
+class ElectricCar:
+    def __init__(self):
+        self.battery = Battery()
+
+class Battery:
+    def __init__(self):
+        self.capacity = 50
+
+    def get_range(self):
+        return self.capacity * 10
+
+    def upgrade_battery(self):
+        if self.capacity!= 65:
+            self.capacity = 65
+
+electric_car = ElectricCar()
+print(electric_car.battery.get_range())
+electric_car.battery.upgrade_battery()
+print(electric_car.battery.get_range())
+print("\n\n\n")
+
+######################9-10. Imported Restaurant:
+
+#restaurant.py
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print(f"Restaurant name: {self.restaurant_name}")
+        print(f"Cuisine type: {self.cuisine_type}")
+
+#main.py
+from restaurant import Restaurant
+
+restaurant = Restaurant("Alice Pizza", "Pizza")
+restaurant.describe_restaurant()
+
+######################9-11. Imported Admin:
+
+
+######################9-12. Multiple Modules:
