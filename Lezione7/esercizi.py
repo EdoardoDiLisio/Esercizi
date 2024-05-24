@@ -1,3 +1,5 @@
+##############  EDOARDO DI LISIO  ##############
+
 # ESERCIZIO 1
 
 # Write a function to find all numbers divisible by 7, not a multiple of 5, 

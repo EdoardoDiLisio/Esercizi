@@ -1,3 +1,5 @@
+##############  EDOARDO DI LISIO  ##############
+
 from random import choices
 from random import randint
 

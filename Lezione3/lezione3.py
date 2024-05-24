@@ -1,3 +1,5 @@
+##############  EDOARDO DI LISIO  ##############
+
 # 4.1 Pizzas
 
 pizzas = ['Margherita', 'Patate', 'Funghi']
