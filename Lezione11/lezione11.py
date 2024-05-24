@@ -48,3 +48,33 @@ class Sala:
         # Restituisce il numero di posti ancora disponibili nella sala
         return self.posti_totali - self.posti_prenotati
 
+class Cinema:
+    def __init__(self):
+        self.sale = []  # Lista delle sale nel cinema
+
+    def aggiungi_sala(self, sala):
+        # Aggiunge una nuova sala al cinema
+        self.sale.append(sala)
+
+    def prenota_film(self, titolo_film, num_posti):
+        # Cerca il film desiderato tra le sale del cinema
+        for sala in self.sale:
+            if sala.film.titolo == titolo_film:
+                # Se il film è trovato, tenta di prenotare posti nella sala e restituisce un messaggio di stato
+                return sala.prenota_posti(num_posti)
+        # Se il film non è trovato, restituisce un messaggio di errore
+        return "Spiacenti, il film selezionato non è in programmazione."
+
+# Test case
+cinema = Cinema()
+
+# Aggiungi sale con film
+sala1 = Sala(1, Film("Interstellar", 180), 100)
+sala2 = Sala(2, Film("Inception", 150), 80)
+cinema.aggiungi_sala(sala1)
+cinema.aggiungi_sala(sala2)
+
+# Prenotazione di posti
+print(cinema.prenota_film("Inception", 2))  # Output: Prenotazione confermata per 2 posti per il film Inception.
+print(cinema.prenota_film("Interstellar", 120))  # Output: Spiacenti, non ci sono abbastanza posti disponibili.
+print(cinema.prenota_film("The Dark Knight", 2))  # Output: Spiacenti, il film selezionato non è in programmazione.
