@@ -22,6 +22,29 @@ Test case:
 
 class Film:
     def __init__(self, titolo, durata):
-        self.titolo = titolo
-        self.durata = durata
-        
+        self.titolo = titolo  # Titolo del film
+        self.durata = durata  # Durata del film in minuti
+
+class Sala:
+    def __init__(self, numero, film, posti_totali):
+        self.numero = numero  # Numero identificativo della sala
+        self.film = film  # Film attualmente in programmazione nella sala
+        self.posti_totali = posti_totali  # Numero totale di posti nella sala
+        self.posti_prenotati = 0  # Numero di posti già prenotati in sala
+
+    def prenota_posti(self, num_posti):
+        # Calcola il numero di posti disponibili
+        posti_disponibili = self.posti_totali - self.posti_prenotati
+        # Controlla se ci sono abbastanza posti disponibili per la prenotazione richiesta
+        if num_posti <= posti_disponibili:
+            # Se ci sono abbastanza posti disponibili, aggiorna il numero di posti prenotati e restituisce un messaggio di conferma
+            self.posti_prenotati += num_posti
+            return f"Prenotazione confermata per {num_posti} posti per il film {self.film.titolo}."
+        else:
+            # Se non ci sono abbastanza posti disponibili, restituisce un messaggio di errore
+            return "Spiacenti, non ci sono abbastanza posti disponibili."
+
+    def posti_disponibili(self):
+        # Restituisce il numero di posti ancora disponibili nella sala
+        return self.posti_totali - self.posti_prenotati
+
