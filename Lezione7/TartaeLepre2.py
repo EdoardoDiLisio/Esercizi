@@ -1,10 +1,3 @@
-'''
-This module provides several functions to simulate a race between the turtle and the hare
-'''
-
-# Gioele Amendola
-# 14/05/2024
-
 from random import choices
 from random import randint
 
