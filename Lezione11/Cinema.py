@@ -1,5 +1,5 @@
 ##############  EDOARDO DI LISIO  ##############
-##############      24-05-00      ##############
+##############      24-05-24      ##############
 '''
 Sistema di Prenotazione Cinema
 Sviluppa un sistema in Python che gestisca le prenotazioni per un cinema. Il cinema ha diverse sale, ognuna con un diverso film in 
@@ -78,19 +78,4 @@ cinema.aggiungi_sala(sala2)
 print(cinema.prenota_film("Inception", 2))  # Output: Prenotazione confermata per 2 posti per il film Inception.
 print(cinema.prenota_film("Interstellar", 120))  # Output: Spiacenti, non ci sono abbastanza posti disponibili.
 print(cinema.prenota_film("The Dark Knight", 2))  # Output: Spiacenti, il film selezionato non è in programmazione.
-
-#per casa#
-
-'''
-Gestione di un magazzino
-Scrivi un programma in Python che gestisca un magazzino. Il programma deve permettere di aggiungere prodotti al magazzino, 
-cercare prodotti per nome e verificare la disponibilità di un prodotto.
-Definisci una classe Prodotto con i seguenti attributi:
-- nome (stringa)
-- quantità (intero)
-Definisci una classe Magazzino con i seguenti metodi:
-- aggiungi_prodotto(prodotto: Prodotto): aggiunge un prodotto al magazzino.
-- cerca_prodotto(nome: str) -> Prodotto: cerca un prodotto per nome e lo ritorna se esiste.
-- verifica_disponibilità(nome: str) -> str: verifica se un prodotto è disponibile in magazzino.
-'''
 
