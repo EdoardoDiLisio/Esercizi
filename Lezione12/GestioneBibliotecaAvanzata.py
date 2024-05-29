@@ -23,3 +23,67 @@ Test Cases:
 - L'utente restituisce il libro, che viene marcato di nuovo come disponibile.
 - In qualsiasi momento, un utente può visualizzare quali libri sono disponibili per il prestito.
 '''
+
+class Libro:
+    def __init__(self, titolo, autore):
+        self.titolo = titolo
+        self.autore = autore
+        self.prestato = False
+
+class Biblioteca:
+    def __init__(self):
+        self.catalogo = []
+
+    def aggiungi_libro(self, libro):
+        self.catalogo.append(libro)
+        return f"Il libro '{libro.titolo}' di {libro.autore} è stato aggiunto al catalogo."
+
+    def presta_libro(self, titolo):
+        for libro in self.catalogo:
+            if libro.titolo == titolo:
+                if libro.prestato:
+                    return f"Il libro '{titolo}' è già stato prestato."
+                else:
+                    libro.prestato = True
+                    return f"Il libro '{titolo}' è stato prestato con successo."
+        return f"Il libro '{titolo}' non è disponibile nella biblioteca."
+
+    def restituisci_libro(self, titolo):
+        for libro in self.catalogo:
+            if libro.titolo == titolo:
+                if libro.prestato:
+                    libro.prestato = False
+                    return f"Il libro '{titolo}' è stato restituito con successo."
+                else:
+                    return f"Il libro '{titolo}' non è stato prestato."
+        return f"Il libro '{titolo}' non è disponibile nella biblioteca."
+
+    def mostra_libri_disponibili(self):
+        libri_disponibili = [libro.titolo for libro in self.catalogo if not libro.prestato]
+        if libri_disponibili:
+            return "Libri disponibili: " + ", ".join(libri_disponibili)
+        else:
+            return "Nessun libro disponibile al momento."
+
+
+# Test del sistema
+biblioteca = Biblioteca()
+
+# Aggiunta dei libri
+libro1 = Libro("Il signore degli anelli", "J.R.R. Tolkien")
+libro2 = Libro("1984", "George Orwell")
+libro3 = Libro("Harry Potter e la pietra filosofale", "J.K. Rowling")
+
+print(biblioteca.aggiungi_libro(libro1))
+print(biblioteca.aggiungi_libro(libro2))
+print(biblioteca.aggiungi_libro(libro3))
+
+# Prestito di un libro
+print(biblioteca.presta_libro("1984"))
+print(biblioteca.presta_libro("1984"))  # Tentativo di prendere in prestito lo stesso libro di nuovo
+
+# Restituzione di un libro
+print(biblioteca.restituisci_libro("1984"))
+
+# Mostra libri disponibili
+print(biblioteca.mostra_libri_disponibili())
