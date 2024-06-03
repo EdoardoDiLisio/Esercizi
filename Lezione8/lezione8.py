@@ -304,6 +304,29 @@ class University:
 
 # Creating instances and testing
 math_course = Course("Mathematics", "MATH101")
+professor_smith = Professor("John Smith", 45, "P001", "Mathematics")
+professor_smith.assign_to_course(math_course)
+
+physics_course = Course("Physics", "PHY101")
+professor_doe = Professor("Jane Doe", 50, "P002", "Physics")
+professor_doe.assign_to_course(physics_course)
+
+math_department = Department("Math Department")
+math_department.add_course(math_course)
+math_department.add_professor(professor_smith)
+
+physics_department = Department("Physics Department")
+physics_department.add_course(physics_course)
+physics_department.add_professor(professor_doe)
+
+my_university = University("My University")
+my_university.add_department(math_department)
+my_university.add_department(physics_department)
+
+print(my_university)
+
+# Creating instances and testing
+math_course = Course("Mathematics", "MATH101")
 physics_course = Course("Physics", "PHY101")
 professor_smith = Professor("John Smith", 45, "P001", "Mathematics")
 professor_doe = Professor("Jane Doe", 50, "P002", "Physics")
