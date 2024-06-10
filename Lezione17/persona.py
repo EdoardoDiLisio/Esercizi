@@ -48,4 +48,4 @@ class Persona:
         return self.__age
 
     def greet(self):
-        print(f"Ciao, sono {self.__first_name} {self.__last_name}! Ho {self.__age} anni!")
+        return f"Ciao, sono {self.__first_name} {self.__last_name}! Ho {self.__age} anni!"

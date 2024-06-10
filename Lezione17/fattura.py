@@ -1,6 +1,8 @@
 #  EDOARDO DI LISIO
 #  10.06.24
 
+import paziente, dottore
+
 class Fattura:
     def __init__(self, patients, doctor):
         self.__patients = patients
@@ -15,6 +17,7 @@ class Fattura:
             print("Non è possibile creare la classe fattura poiché il dottore non è valido!")
 
     def getSalary(self):
+        self.__salary = self.__doctor.getParcel() * len(self.__patients)
         return self.__salary
 
     def getFatture(self):

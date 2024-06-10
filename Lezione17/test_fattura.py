@@ -24,8 +24,8 @@ class TestFattura(unittest.TestCase):
         p1 = Paziente("Giulia", "Verdi", "P001")
         lista_pazienti = [p1]
         f = Fattura(lista_pazienti, d)
-        self.assertIsNone(f.fattura)
-        self.assertIsNone(f.salary)
+        self.assertEqual(1, f.getFatture())
+        self.assertEqual(50.0, f.getSalary())
 
     def test_add_patient(self):
         d = Dottore("Mario", "Rossi", "Pediatra", 50.0)

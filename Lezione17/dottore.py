@@ -39,9 +39,10 @@ class Dottore(Persona):
     def isAValidDoctor(self):
         if self.getAge() > 30:
             print(f"Doctor {self.getName()} {self.getLastname()} is valid!")
+            return True
         else:
             print(f"Doctor {self.getName()} {self.getLastname()} is not valid!")
+            return False
 
     def doctorGreet(self):
-        self.greet()
-        print(f"Sono un medico {self.__specialization}")
+        return self.greet() + f" Sono un medico {self.__specialization}"
