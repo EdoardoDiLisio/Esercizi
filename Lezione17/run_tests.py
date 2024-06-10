@@ -2,18 +2,21 @@
 #  10.06.24
 
 import unittest
+from test_persona import TestPersona
+from test_dottore import TestDottore
+from test_paziente import TestPaziente
+from test_fattura import TestFattura
 
-# Scopre ed esegue tutti i test nella directory corrente
-def run_all_tests():
-    # Crea un loader di test
-    loader = unittest.TestLoader()
-    # Cerca e carica tutti i test nella directory corrente
-    suite = loader.discover(start_dir='.', pattern='test_*.py')
+if __name__ == "__main__":
+    # Definisci la suite di test
+    suite = unittest.TestSuite()
 
-    # Crea un runner che eseguirà i test
+    # Aggiungi i test per le classi Persona, Dottore, Paziente e Fattura
+    suite.addTest(unittest.makeSuite(TestPersona))
+    suite.addTest(unittest.makeSuite(TestDottore))
+    suite.addTest(unittest.makeSuite(TestPaziente))
+    suite.addTest(unittest.makeSuite(TestFattura))
+
+    # Esegui la suite di test
     runner = unittest.TextTestRunner()
-    # Esegue i test e restituisce i risultati
-    runner.run(suite)
-
-if __name__ == '__main__':
-    run_all_tests()
+    result = runner.run(suite)
