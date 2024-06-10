@@ -1,3 +1,6 @@
+#  EDOARDO DI LISIO
+#  10.06.24
+
 class Noleggio:
     def __init__(self, film_list):
         """
