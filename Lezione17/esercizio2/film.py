@@ -1,3 +1,6 @@
+#  EDOARDO DI LISIO
+#  10.06.24
+
 class Film:
     def __init__(self, id, title):
         # Metodo costruttore per inizializzare gli attributi
