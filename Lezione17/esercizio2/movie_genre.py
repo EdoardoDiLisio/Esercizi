@@ -1,3 +1,6 @@
+#  EDOARDO DI LISIO
+#  10.06.24
+
 from film import Film
 
 class Genre(Film):
