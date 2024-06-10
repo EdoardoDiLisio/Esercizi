@@ -4,7 +4,7 @@
 from dottore import Dottore
 from paziente import Paziente
 from fattura import Fattura
-from persona import Persona
+
 # Creazione di due dottori con specializzazione e parcella
 dottore_1 = Dottore("Mario", "Rossi", "Pediatra", 50.0)
 dottore_1.setAge(29)  # Imposta l'età del primo dottore

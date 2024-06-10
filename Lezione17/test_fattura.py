@@ -2,7 +2,6 @@
 #  10.06.24
 
 import unittest
-from persona import Persona
 from dottore import Dottore
 from paziente import Paziente
 from fattura import Fattura

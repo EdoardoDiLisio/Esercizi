@@ -1,3 +1,6 @@
+#  EDOARDO DI LISIO
+#  10.06.24
+
 class Fattura:
     def __init__(self, patients, doctor):
         # Inizializza la lista dei pazienti e il dottore

@@ -1,3 +1,6 @@
+#  EDOARDO DI LISIO
+#  10.06.24
+
 from persona import Persona
 
 class Paziente(Persona):
