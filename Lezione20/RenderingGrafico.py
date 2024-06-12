@@ -59,28 +59,33 @@ Ecco un Triangolo avente base 4 ed altezza 4!
 L'area di questo triangolo vale: 8.0
 '''
 
-from abc import ABC, abstractmethod
-
+from abc import ABC, abstractmethod  # Importa la classe ABC e il decoratore abstractmethod dal modulo abc
+# Definizione della classe astratta Forma che eredita dalla classe ABC
 class Forma(ABC):
+    # Costruttore della classe con un parametro 'nome'
     def __init__(self, nome):
         self.nome = nome
 
-    @abstractmethod
+    @abstractmethod  # Metodo astratto che deve essere implementato nelle classi figlie
     def getArea(self):
         pass
 
-    @abstractmethod
+    @abstractmethod  # Metodo astratto che deve essere implementato nelle classi figlie
     def render(self):
         pass
 
+# Definizione della classe figlia Quadrato che eredita dalla classe Forma
 class Quadrato(Forma):
+    # Costruttore della classe con un parametro 'lato'
     def __init__(self, lato):
-        super().__init__("Quadrato")
+        super().__init__("Quadrato")  # Chiama il costruttore della classe madre
         self.lato = lato
 
+    # Implementazione del metodo per calcolare l'area del quadrato
     def getArea(self):
         return self.lato * self.lato
 
+    # Implementazione del metodo per renderizzare il quadrato
     def render(self):
         print(f"Ecco un {self.nome} di lato {self.lato}!")
         for i in range(self.lato):
@@ -90,15 +95,19 @@ class Quadrato(Forma):
                 print("* " + "  " * (self.lato - 2) + "*")
         print(f"L'area di questo {self.nome} vale: {self.getArea()}\n")
 
+# Definizione della classe figlia Rettangolo che eredita dalla classe Forma
 class Rettangolo(Forma):
+    # Costruttore della classe con due parametri 'base' e 'altezza'
     def __init__(self, base, altezza):
-        super().__init__("Rettangolo")
+        super().__init__("Rettangolo")  # Chiama il costruttore della classe madre
         self.base = base
         self.altezza = altezza
 
+    # Implementazione del metodo per calcolare l'area del rettangolo
     def getArea(self):
         return self.base * self.altezza
 
+    # Implementazione del metodo per renderizzare il rettangolo
     def render(self):
         print(f"Ecco un {self.nome} avente base {self.base} ed altezza {self.altezza}!")
         print("* " * self.base)
@@ -107,14 +116,18 @@ class Rettangolo(Forma):
         print("* " * self.base)
         print(f"L'area di questo {self.nome} vale: {self.getArea()}\n")
 
+# Definizione della classe figlia Triangolo che eredita dalla classe Forma
 class Triangolo(Forma):
+    # Costruttore della classe con un parametro 'lato'
     def __init__(self, lato):
-        super().__init__("Triangolo")
+        super().__init__("Triangolo")  # Chiama il costruttore della classe madre
         self.lato = lato
 
+    # Implementazione del metodo per calcolare l'area del triangolo
     def getArea(self):
         return (self.lato * self.lato) / 2
 
+    # Implementazione del metodo per renderizzare il triangolo
     def render(self):
         print(f"Ecco un {self.nome} avente base {self.lato} ed altezza {self.lato}!")
         for i in range(self.lato):
@@ -127,11 +140,11 @@ class Triangolo(Forma):
         print(f"L'area di questo {self.nome} vale: {self.getArea()}\n")
 
 # Test delle classi
-quadrato = Quadrato(4)
-quadrato.render()
+quadrato = Quadrato(4)  # Crea un'istanza di Quadrato con lato 4
+quadrato.render()  # Chiama il metodo render di Quadrato
 
-rettangolo = Rettangolo(8, 4)
-rettangolo.render()
+rettangolo = Rettangolo(8, 4)  # Crea un'istanza di Rettangolo con base 8 e altezza 4
+rettangolo.render()  # Chiama il metodo render di Rettangolo
 
-triangolo = Triangolo(4)
-triangolo.render()
+triangolo = Triangolo(4)  # Crea un'istanza di Triangolo con lato 4
+triangolo.render()  # Chiama il metodo render di Triangolo

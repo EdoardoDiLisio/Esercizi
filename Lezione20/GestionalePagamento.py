@@ -52,28 +52,30 @@ Numero della carta: 6543210987654321
 
 class Pagamento:
     def __init__(self):
-        self.__importo = 0.0
+        self.__importo = 0.0  # Inizializza l'attributo privato '__importo' a 0.0
 
     def set_importo(self, importo):
-        self.__importo = importo
+        self.__importo = importo  # Imposta l'importo del pagamento
 
     def get_importo(self):
-        return self.__importo
+        return self.__importo  # Restituisce l'importo del pagamento
 
     def dettagli_pagamento(self):
-        return f"Importo del pagamento: €{self.get_importo():.2f}"
+        return f"Importo del pagamento: €{self.get_importo():.2f}"  # Restituisce una stringa con l'importo del pagamento
 
 
-class PagamentoContanti(Pagamento):
+class PagamentoContanti(Pagamento):  # La classe PagamentoContanti eredita dalla classe Pagamento
     def __init__(self):
-        super().__init__()
+        super().__init__()  # Chiama il costruttore della classe padre
 
-    def dettagli_pagamento(self):
-        importo = self.get_importo()
-        banconote = [500, 200, 100, 50, 20, 10, 5]
-        monete = [2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
-        banconote_usate = []
-        monete_usate = []
+    def dettagli_pagamento(self):  # Override del metodo dettagli_pagamento della classe Pagamento
+        importo = self.get_importo()  # Ottiene l'importo del pagamento
+        banconote = [500, 200, 100, 50, 20, 10, 5]  # Lista delle banconote disponibili
+        monete = [2, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]  # Lista delle monete disponibili
+        banconote_usate = []  # Lista per tenere traccia delle banconote utilizzate
+        monete_usate = []  # Lista per tenere traccia delle monete utilizzate
+
+        # Calcola le banconote utilizzate per il pagamento
         for banconota in banconote:
             count = 0
             while importo >= banconota:
@@ -81,8 +83,12 @@ class PagamentoContanti(Pagamento):
                 count += 1
             if count > 0:
                 banconote_usate.append((banconota, count))
-        importo = round(importo, 2)  # Round to 2 decimal places
-        importo_cents = int(importo * 100)  # Convert to cents
+
+        # Converti l'importo rimanente in centesimi per gestire le monete
+        importo = round(importo, 2)  # Arrotonda a 2 decimali
+        importo_cents = int(importo * 100)  # Converti in centesimi
+
+        # Calcola le monete utilizzate per il pagamento
         for moneta in monete:
             count = 0
             while importo_cents >= int(moneta * 100):
@@ -90,6 +96,8 @@ class PagamentoContanti(Pagamento):
                 count += 1
             if count > 0:
                 monete_usate.append((moneta, count))
+
+        # Costruisci una stringa con i dettagli del pagamento in contanti
         dettagli = f"Pagamento in contanti di: €{self.get_importo():.2f}\n"
         dettagli += f"{self.get_importo():.2f} euro da pagare in contanti con:\n"
         for banconota, count in banconote_usate:
@@ -102,37 +110,39 @@ class PagamentoContanti(Pagamento):
                 dettagli += f"{count} moneta da {moneta} euro\n"
             else:
                 dettagli += f"{count} monete da {moneta} euro\n"
-        return dettagli
+        return dettagli  # Restituisce la stringa con i dettagli del pagamento
 
 
-class PagamentoCartaDiCredito(Pagamento):
+class PagamentoCartaDiCredito(Pagamento):  # La classe PagamentoCartaDiCredito eredita dalla classe Pagamento
     def __init__(self, nome_titolare, data_scadenza, numero_carta):
-        super().__init__()
-        print("\n")
+        super().__init__()  # Chiama il costruttore della classe padre
+        print("***           ***")  # Stampa una riga vuota
+        # Inizializza gli attributi specifici della carta di credito: nome_titolare, data_scadenza, numero_carta
         self.nome_titolare = nome_titolare
         self.data_scadenza = data_scadenza
         self.numero_carta = numero_carta
 
-    def dettagli_pagamento(self):
+    def dettagli_pagamento(self):  # Override del metodo dettagli_pagamento della classe Pagamento
+        # Costruisci una stringa con i dettagli del pagamento con carta di credito
         return f"Pagamento di: €{self.get_importo():.2f} effettuato con la carta di credito\n" \
                f"Nome sulla carta: {self.nome_titolare}\n" \
                f"Data di scadenza: {self.data_scadenza}\n" \
                f"Numero della carta: {self.numero_carta}"
 
 
-# Test
-pagamento1 = PagamentoContanti()
-pagamento1.set_importo(150.0)
-print(pagamento1.dettagli_pagamento())
+# Test delle classi
+pagamento1 = PagamentoContanti()  # Crea un'istanza di PagamentoContanti
+pagamento1.set_importo(150.0)  # Imposta l'importo del pagamento
+print(pagamento1.dettagli_pagamento())  # Stampa i dettagli del pagamento
 
-pagamento2 = PagamentoContanti()
-pagamento2.set_importo(95.25)
-print(pagamento2.dettagli_pagamento())
+pagamento2 = PagamentoContanti()  # Crea un'altra istanza di PagamentoContanti
+pagamento2.set_importo(95.25)  # Imposta l'importo del pagamento
+print(pagamento2.dettagli_pagamento())  # Stampa i dettagli del pagamento
 
-pagamento3 = PagamentoCartaDiCredito("Mario Rossi", "12/24", "12345678987654321")
-pagamento3.set_importo(200.0)
-print(pagamento3.dettagli_pagamento())
+pagamento3 = PagamentoCartaDiCredito("Mario Rossi", "12/24", "12345678987654321")  # Crea un'istanza di PagamentoCartaDiCredito
+pagamento3.set_importo(200.0)  # Imposta l'importo del pagamento
+print(pagamento3.dettagli_pagamento())  # Stampa i dettagli del pagamento
 
-pagamento4 = PagamentoCartaDiCredito("Luigi Bianchi", "01/25", "98765432123456789")
-pagamento4.set_importo(500.0)
-print(pagamento4.dettagli_pagamento())
+pagamento4 = PagamentoCartaDiCredito("Luigi Bianchi", "01/25", "98765432123456789")  # Crea un'altra istanza di PagamentoCartaDiCredito
+pagamento4.set_importo(500.0)  # Imposta l'importo del pagamento
+print(pagamento4.dettagli_pagamento())  # Stampa i dettagli del pagamento
