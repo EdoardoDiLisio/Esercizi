@@ -1,0 +1,90 @@
+- Qual è una caratteristica della topologia a BUS? R: Utilizza un unico canale di comunicazione condiviso
+- Qual è una funzione primaria delle reti di computer? R: Condividere risorse e informazioni tra dispositivi
+- Come sono configurati i dispositivi nella topologia a MESH di una rete? R: Ogni dispositivo è collegato direttamente a ogni altro dispositivo 
+- Nella comunicazione di rete, cosa significa 'broadcast'? R: Invio di messaggi a tutti i dispositivi nella rete
+- Quale delle seguenti affermazioni descrive meglio il modello client-server? R: Un nodo centrale fornisce risorse e servizi agli altri nodi
+- In una rete point-to-point, come vengono trasferiti i dati? R: I dati vengono inviati direttamente da un dispositivo a un altro attraverso un collegamento diretto.
+- Quale affermazione descrive meglio una rete peer-to-peer (P2P)? R: Ogni nodo può fungere da client o da server
+- Nel contesto delle reti di computer, cosa significa 'unicast'? R: Il messaggio è inviato a un singolo dispositivo designato
+- Come vengono selezionati i percorsi in una rete point-to-point quando sono disponibili più percorsi? R: Il percorso può essere selezionato sulla base della lunghezza o del traffico.
+- Che cosa è 'anycast' nella comunicazione di rete? R: Comunicazione uno-a-molti più vicini
+- Quanti bit utilizza l'Extended ASCII per rappresentare ciascun carattere? R: 8 bit
+- Qual è il risultato dell'addizione dei numeri binari 1100 e 111? R: 10011
+- Come viene chiamato un gruppo di 8 bit? R: Byte
+- Converti il numero binario 10100 in un numero decimale. Qual è il risultato corretto? R: 20
+- Converti il numero decimale 26 in un numero binario. Qual è il risultato corretto? R: 11010
+- Qual è il risultato della sottrazione dei numeri binari 10100 e 110 ? R: 01110
+- Qual è l'unità di base dell'informazione nel codice binario? R: Bit
+- Considera l'espressione booleana: (A OR B) AND NOT (C AND D). Quale è il risultato di questa espressione quando A=0, B=1, C=1, D=0? R: 1
+- Qual è l'intervallo di valori rappresentabili con 5 bit? R: da 0 a 31
+- Quante combinazioni distinte si possono creare con 4 bit? R: Sedici
+- A cosa serve il registro TEMP nella CPU? R: Tiene i dati intermedi durante l'esecuzione delle istruzioni
+- Che cos'è la CPU in un computer? R: L'unità di elaborazione centrale che esegue istruzioni dei programmi e gestisce le operazioni di calcolo.
+- Che cosa è il MDR? R: Memory Data Register, contiene dati trasferiti da o verso la memoria
+- Cosa collega il system bus in un computer? R: La CPU, la RAM e i dispositivi periferici
+- Cosa fa il MAR? R: Tiene l'indirizzo di memoria da accedere
+- Cosa fa l'ALU? R: Esegue operazioni aritmetiche e logiche
+- Cosa memorizza la RAM principalmente in un'architettura Von Neumann? R: Sia dati che istruzioni 
+- Qual è la funzione principale dei dispositivi di output? R: Convertire i segnali digitali in forma leggibile/percettibile per gli umani
+- Quale dispositivo può funzionare sia come input che come output? R: Monitor touchscreen
+- Quali sono i due tipi principali di operazioni che si possono effettuare sulla memoria? R: Leggere e scrivere
+- Che cos'è un protocollo di un certo layer n? R: Le regole per la comunicazione tra lo stesso layer su macchine diverse
+- Che cos'è un servizio non orientato alla connessione? R: Un servizio che tratta ogni pacchetto di dati indipendentemente
+- Che cosa governano i protocolli di rete? R: Le interazioni tra dispositivi connessi
+- In quali applicazioni si preferiscono generalmente i servizi non orientati alla connessione? R: Streaming e giochi online
+- Che tipo di servizio è un servizio orientato alla connessione? R:Un servizio che stabilisce una connessione dedicata prima della trasmissione dei dati
+- Come sono strutturate le reti per semplificare il design? R: In più layers costruiti uno sull'altro
+- Cosa accade quando i pacchetti dati vengono persi in un servizio orientato alla connessione? R: Vengono ritrasmessi 
+- Cosa è un'internetwork? R: Una collezione di diverse reti collegate tramite un gateway
+- Qual è il ruolo della "ACK" nei servizi orientati alla connessione? R: Confermare la corretta ricezione di un pacchetto dati
+- Quali sono le caratteristiche chiave dei servizi orientati alla connessione? R: Affidabilità, controllo del flusso e ordine dei dati
+- Che cosa è un driver? R: Un software che traduce i comandi del sistema operativo in comandi comprensibili per l'hardware
+- Che cosa si intende per BIOS? R: Un insieme di routine software memorizzate su un chip della scheda madre che inizializza l'hardware durante l'avvio del computer
+- Che cosa si intende per kernel? R: Il componente centrale del sistema operativo che gestisce le operazioni fondamentali come la gestione della memoria, dei processi e dell'hardware
+- Che cosa si intende per sistema operativo? R: Un software che gestisce le risorse hardware e software di un computer, esegue applicazioni e servizi, e interagisce con l'utente
+- Qual è il ruolo principale della scheda madre in un computer? R: Collegare e permettere la comunicazione tra i componenti elettronici cruciali
+- Qual è la funzione principale del firmware in un dispositivo elettronico? R: Inizializzare il componente e facilitare l'interazione con altri componenti
+- Qual è uno dei principali vantaggi di un Hybrid Kernel? R: Combina le prestazioni di un kernel monolitico con la modularità di un micro-kernel
+- Quale delle seguenti è un vantaggio dell'UEFI rispetto al BIOS? R: Offre meccanismi di sicurezza 
+- Quale delle seguenti memorie non è volatile? R: ROM
+- Quale tipo di sistema operativo permette l'esecuzione di programmi per più utenti simultaneamente? R: Multi-user Operating Systems
+- Che cosa fa un dispositivo dopo aver ricevuto i dati in CSMA/CA? R: Invia un segnale di conferma 
+- Che cosa rappresentano le collisioni nel contesto delle reti? R: Scontro tra pacchetti di dati trasmessi contemporaneamente 
+- Cosa fa il preambolo in un frame dati? R: Aiuta il dispositivo ricevente a prepararsi per comprendere i dati in arrivo
+- Qual è la differenza principale tra CSMA/CD e CSMA/CA? R: CSMA/CD rileva le collisioni, mentre CSMA/CA evita le collisioni
+- Quali sono le funzioni del sottolivello Logical Link Control (LLC)? R: Controllo del flusso di rete e rilevazione degli errori
+- Qual è la funzione principale del sottolivello Media Access Control (MAC)? R: Gestire il controllo degli accessi al mezzo di trasmissione 
+- Qual è lo scopo del checksum in un frame dati? R: Rilevare errori nella trasmissione
+- Qual è lo scopo del modello ISO/OSI? R: Fornire un modello standard contro cui possono essere confrontate varie architetture di rete 
+- Quale livello del modello OSI è responsabile della connessione fisica tra i dispositivi? R: Livello Physical
+- Quale livello del modello OSI gestisce il trasferimento dati nodo-a-nodo e la rilevazione e correzione degli errori? R: Livello Data Link 
+- Qual è lo scopo principale della Subnet Mask? R: Determinare le porzioni di rete e host di un indirizzo IP 
+- Quale livello è responsabile della traduzione dei dati tra il livello di applicazione e la rete? R: Presentation Layer
+- Quale livello del modello OSI è responsabile della gestione del dialogo tra due computer? R: Session Layer 
+- Qual è il ruolo principale del Application Layer? R: Fornire servizi di rete alle applicazioni utente
+- Quale dei seguenti è l'indirizzo logico utilizzato per identificare i dispositivi su una rete? R: Indirizzo IP
+- Quale algoritmo di instradamento calcola il percorso verso una destinazione tramite metriche di costo cumulative? R: Shortest Path First (SPF)
+- Qual è la funzione principale del Network Layer nel modello OSI? R: Instradamento e inoltro dei pacchetti di dati 
+- Quale livello è responsabile della creazione, mantenimento e terminazione delle connessioni? R: Transport Layer
+- Qual è lo scopo principale della Network Address Translation (NAT)? R: Tradurre gli indirizzi IP privati in indirizzi IP pubblici
+- Cosa rappresenta un socket in una rete? R: Un'interfaccia attraverso cui le applicazioni comunicano all'interno di una rete
+- Qual è lo stato di un processo che ha terminato la sua esecuzione ma non è ancora stato rilasciato dal processo genitore? R: Zombie
+- Quale componente del sistema operativo traduce gli indirizzi di memoria virtuali in indirizzi fisici? R: Memory Management Unit (MMU)
+- Cosa fa il sistema operativo quando si verifica un "page fault"? R: Sposta la pagina dal disco alla RAM
+- Quale dei seguenti è un dispositivo di memoria secondaria? R: Hardisk
+- Qual è il ruolo principale della memoria buffer nella gestione dei dispositivi periferici? R: Immagazzinare temporaneamente i dati per sincronizzare il trasferimento tra processi e dispositivi
+- Quale delle seguenti affermazioni descrive correttamente una directory in un file system? R: Una directory è un file che contiene puntatori ad altri file.
+- Quale comando di sistema viene utilizzato per creare un nuovo processo in un sistema operativo Unix-like? R: fork
+- Quale dei seguenti è un esempio di interfaccia alfanumerica? R: Interfaccia a riga di comando 
+- Quale procedura verifica l'identità dell'utente? R: Autenticazione
+- Qual è il principale vantaggio dell'utilizzo della memoria virtuale in un sistema operativo? R: Permette ai processi di avere più spazio di indirizzamento rispetto alla memoria fisica disponibile 
+- Quale protocollo di posta elettronica consente agli utenti di visualizzare e manipolare i messaggi come se fossero memorizzati localmente, mantenendo la sincronizzazione su più dispositivi? R: IMAP
+- Quale protocollo del Transport Layer fornisce una comunicazione affidabile e orientata alla connessione? R: TCP
+- Quale protocollo viene utilizzato per risolvere i nomi di dominio in indirizzi IP? R: DNS
+- Quale protocollo è utilizzato per il trasporto dei messaggi di posta elettronica? R: SMTP
+- Qual è il compito principale del protocollo ARP? R: Mappare gli indirizzi IP agli indirizzi MAC
+- Quale protocollo utilizza i messaggi di tipo "Echo Request" ed "Echo Reply" per testare la connettività di rete? R: ICMP
+- Quale protocollo è utilizzato per la configurazione automatica degli indirizzi IP sui dispositivi di rete? R: DHCP
+- Quale protocollo fornisce una connessione non affidabile e senza connessione, spesso utilizzato per lo streaming audio/video? R: UDP
+- Quale protocollo di posta elettronica scarica i messaggi dal server e li elimina tipicamente dopo il download? R: POP3
+- Quale protocollo viene utilizzato per il trasferimento di pagine web? R: HTTP
