@@ -4,7 +4,7 @@ class Elettrodomestico:
         self.marca = marca
         self.modello = modello
         self.potenza = potenza
-       
+        
     def descrivi_elettrodomestico(self):
         # Metodo che stampa una descrizione del Elettrodomestico nel formato specificato.
         print(f"Marca: {self.marca}, Modello: {self.modello}, Potenza: {self.potenza}W")
